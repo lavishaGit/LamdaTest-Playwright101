@@ -1,0 +1,14 @@
+
+
+# Commands that will run on workspace start
+tasks:
+  - name: Install dependencies
+    init: npm install
+    command: npm run test
+
+# Ports to expose on workspace startup
+ports:
+    - port: 3000
+      onOpen: open-preview
+      name: Website
+      description: Website Preview
